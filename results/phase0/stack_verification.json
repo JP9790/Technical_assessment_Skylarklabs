@@ -1,0 +1,110 @@
+{
+  "timestamp_utc": "2026-08-30T23:38:42.644475+00:00",
+  "hostname": "autonomique-legion",
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:19:41) [GCC 14.3.0]",
+  "jp_test_root": "/home/autonomique/jp_test",
+  "paths": [
+    {
+      "label": "isaac_sim",
+      "path": "/home/autonomique/AVSR/isaac_sim",
+      "exists": true,
+      "is_dir": true
+    },
+    {
+      "label": "isaac_lab",
+      "path": "/home/autonomique/AVSR/IsaacLab",
+      "exists": true,
+      "is_dir": true
+    },
+    {
+      "label": "unitree_sim_isaaclab",
+      "path": "/home/autonomique/jp_test/external/unitree_sim_isaaclab",
+      "exists": true,
+      "is_dir": true
+    },
+    {
+      "label": "GMR",
+      "path": "/home/autonomique/jp_test/external/GMR",
+      "exists": true,
+      "is_dir": true
+    },
+    {
+      "label": "sim_main.py",
+      "path": "/home/autonomique/jp_test/external/unitree_sim_isaaclab/sim_main.py",
+      "exists": true,
+      "is_dir": false
+    },
+    {
+      "label": "fetch_assets.sh",
+      "path": "/home/autonomique/jp_test/external/unitree_sim_isaaclab/fetch_assets.sh",
+      "exists": true,
+      "is_dir": false
+    }
+  ],
+  "versions": {
+    "isaac_sim": "6.0.0-rc.59+release.41464.5f2772bc.gl",
+    "isaac_lab_git": "ad5b07e33e56f1e4c62e94e753c6b82f95972611 [CI][Auto Version Bump] Compile changelog fragments (schedule)",
+    "unitree_sim_git": "e30c25b1dffdf92ada1d6c8c1fe9a47bdde0fecc update readme",
+    "gmr_git": "bb1bbe40774794fceb2a7c579a3464a28e68c844 Merge pull request #158 from jiminghe/xsens_dev"
+  },
+  "gpu": "NVIDIA GeForce RTX 5090, 595.84, 32607 MiB",
+  "imports": {
+    "isaaclab": "ok"
+  },
+  "phase0_status": "pass",
+  "warnings": [],
+  "errors": [],
+  "unitree_assets_downloaded": true,
+  "brainco_asset_in_jp_test": [
+    "/home/autonomique/jp_test/configs/g1_brainco_target.yaml",
+    "/home/autonomique/jp_test/configs/dex3_to_brainco.yaml",
+    "/home/autonomique/jp_test/assets/brainco",
+    "/home/autonomique/jp_test/docs/phase3_brainco_bringup.md",
+    "/home/autonomique/jp_test/docs/phase7_g1_brainco_coupling.md",
+    "/home/autonomique/jp_test/external/brainco-description",
+    "/home/autonomique/jp_test/external/xr_teleoperate/assets/brainco_hand",
+    "/home/autonomique/jp_test/external/xr_teleoperate/assets/brainco_hand/brainco_right.urdf",
+    "/home/autonomique/jp_test/external/xr_teleoperate/assets/brainco_hand/brainco_left.urdf",
+    "/home/autonomique/jp_test/external/xr_teleoperate/assets/brainco_hand/brainco.yml",
+    "/home/autonomique/jp_test/external/xr_teleoperate/teleop/robot_control/robot_hand_brainco.py",
+    "/home/autonomique/jp_test/results/phase3/brainco_interface.json",
+    "/home/autonomique/jp_test/results/phase3/g1_brainco_attachment_smoke.json",
+    "/home/autonomique/jp_test/results/phase3/brainco_left_hand_test.json",
+    "/home/autonomique/jp_test/results/phase3/brainco_right_hand_test.json",
+    "/home/autonomique/jp_test/scripts/phase5/brainco_hand_fk.py",
+    "/home/autonomique/jp_test/scripts/phase3/test_g1_brainco_attach.py",
+    "/home/autonomique/jp_test/scripts/phase3/parse_brainco_urdf.py",
+    "/home/autonomique/jp_test/scripts/phase3/update_dex3_to_brainco_config.py",
+    "/home/autonomique/jp_test/scripts/phase3/test_brainco_hand.py",
+    "/home/autonomique/jp_test/scripts/phase3/brainco_hand_scene.py",
+    "/home/autonomique/jp_test/scripts/phase7/evaluate_g1_brainco_coupling.py",
+    "/home/autonomique/jp_test/scripts/phase3/__pycache__/brainco_hand_scene.cpython-312.pyc",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revo2_system",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/mjcf/revoarm_single_right_revo2.xml",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/mjcf/revoarm_bimanual_revo2.xml",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/mjcf/revoarm_single_left_revo2.xml",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/urdf/revoarm_single_right_revo2.urdf",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/urdf/revoarm_bimanual_revo2.urdf",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/urdf/revoarm_single_left_revo2.urdf",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/usd/revoarm_single_right_revo2.usd",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/usd/revoarm_bimanual_revo2.usd",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/usd/revoarm_single_left_revo2.usd",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/meshes/connector/collision/right_revo2_connector.STL",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/meshes/connector/collision/left_revo2_connector.STL",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/meshes/connector/visual/right_revo2_connector.STL",
+    "/home/autonomique/jp_test/external/brainco-description/revoarm_system/meshes/connector/visual/left_revo2_connector.STL",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/mjcf/revo2_right.xml",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/mjcf/revo2_left.xml",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/urdf/revo2_right.urdf",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/urdf/revo2_left.urdf",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/usd/revo2_right.usd",
+    "/home/autonomique/jp_test/external/brainco-description/revo2_system/usd/revo2_left.usd",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revoarm_system/urdf/revoarm_single_right_revo2.png",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revoarm_system/urdf/revoarm_bimanual_revo2.png",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revoarm_system/urdf/revoarm_single_left_revo2.png",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revo2_system/urdf/revo2_left.png",
+    "/home/autonomique/jp_test/external/brainco-description/visualizations/revo2_system/urdf/revo2_right.png",
+    "/home/autonomique/jp_test/assets/brainco/revo2_system"
+  ]
+}

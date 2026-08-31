@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-08-31T11:34:33.101072+00:00",
+  "checkpoints": {
+    "right": "/home/autonomique/jp_test/checkpoints/stage_C/residual_adapter_right.pt",
+    "left": "/home/autonomique/jp_test/checkpoints/stage_C/residual_adapter_left.pt"
+  },
+  "training": {
+    "timestamp_utc": "2026-08-31T11:34:33.101072+00:00",
+    "in_dim": 6,
+    "out_dim": 6,
+    "hidden": 64,
+    "right": {
+      "side": "right",
+      "train_mse": 4.204489433369414e-06,
+      "mean_abs_delta": 0.012480676343329783,
+      "wall_clock_s": 71.11416888237,
+      "epochs": 200,
+      "samples": 570
+    },
+    "left": {
+      "side": "left",
+      "train_mse": 9.582294005156763e-07,
+      "mean_abs_delta": 0.020748922863523162,
+      "wall_clock_s": 70.06415581703186,
+      "epochs": 200,
+      "samples": 570
+    }
+  },
+  "stage_c_train_pass": true
+}

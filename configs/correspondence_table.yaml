@@ -1,0 +1,104 @@
+# Phase 4 — Dex3 → BrainCo semantic correspondence (guide §6)
+# Task-space mapping only; no joint-index pairing.
+
+version: 1
+source_embodiment: Unitree G1 29DoF + Dex3
+target_embodiment: Unitree G1 29DoF + BrainCo Revo2 Touch
+mapping_policy: semantic_task_space
+
+rows:
+  - semantic: wrist_pose
+    source_dex3_right: right_wrist_yaw_link
+    source_dex3_left: left_wrist_yaw_link
+    target_brainco_right: right_hand_base_link
+    target_brainco_left: left_hand_base_link
+    mapping_type: SE3
+    weight_position: 1.0
+    weight_orientation: 1.0
+
+  - semantic: palm_pose
+    source_dex3_right: right_hand_palm_link
+    source_dex3_left: left_hand_palm_link
+    target_brainco_right: right_hand_base_link
+    target_brainco_left: left_hand_base_link
+    mapping_type: SE3
+    weight_position: 0.8
+    weight_orientation: 0.8
+    note: BrainCo palm frame co-located with hand base / wrist mount in revo2 USD.
+
+  - semantic: thumb_tip
+    source_dex3_right: right_hand_thumb_2_link
+    source_dex3_left: left_hand_thumb_2_link
+    target_brainco_right: right_thumb_tip
+    target_brainco_left: left_thumb_tip
+    mapping_type: Cartesian
+    weight: 3.0
+
+  - semantic: index_tip
+    source_dex3_right: right_hand_index_1_link
+    source_dex3_left: left_hand_index_1_link
+    target_brainco_right: right_index_tip
+    target_brainco_left: left_index_tip
+    mapping_type: Cartesian
+    weight: 2.5
+
+  - semantic: middle_tip
+    source_dex3_right: right_hand_middle_1_link
+    source_dex3_left: left_hand_middle_1_link
+    target_brainco_right: right_middle_tip
+    target_brainco_left: left_middle_tip
+    mapping_type: Cartesian
+    weight: 1.5
+
+  - semantic: ring_tip
+    source_dex3_right: null
+    source_dex3_left: null
+    target_brainco_right: right_ring_tip
+    target_brainco_left: left_ring_tip
+    mapping_type: Cartesian
+    weight: 0.0
+    note: Dex3 has no ring DoF; target-only regularization in Phase 5 optimizer.
+
+  - semantic: pinky_tip
+    source_dex3_right: null
+    source_dex3_left: null
+    target_brainco_right: right_pinky_tip
+    target_brainco_left: left_pinky_tip
+    mapping_type: Cartesian
+    weight: 0.0
+    note: Dex3 has no pinky DoF; morphology mismatch documented.
+
+  - semantic: joint_configuration
+    source_dex3: q_dex3_hand (7 DoF per hand, 14 bimanual)
+    target_brainco: q_brainco_actuated (6 DoF per hand, 12 bimanual)
+    mapping_type: regularization_only
+    weight: 0.05
+    neutral_pose: brainco_default_open
+
+  - semantic: contacts
+    source_dex3: sim_contact_sensors (none on Dex3 in current task USD)
+    target_brainco: touch_links (URDF *_touch links; not actuated)
+    mapping_type: event_feature
+    weight: 0.0
+    note: Contact retargeting deferred to Phase 5/6 after trajectory IK is stable.
+
+  - semantic: action
+    source_dex3: joint_position 14-D hand slice from policy / demo
+    target_brainco: joint_position 12-D actuated via retargeting_function
+    mapping_type: retargeting_function
+    function: task_space_ik_then_mimic_expand
+
+mount_transform:
+  description: >
+    BrainCo hand base is rigidly attached at G1 wrist yaw link.
+    Full USD swap on G1 is Phase 4b; smoke-validated via g1_brainco_attachment_smoke.json.
+  source_mount_link_right: right_wrist_yaw_link
+  source_mount_link_left: left_wrist_yaw_link
+  target_mount_link_right: right_hand_base_link
+  target_mount_link_left: left_hand_base_link
+  static_offset_right:
+    translation_m: [0.0, 0.0, 0.0]
+    rotation_wxyz: [1.0, 0.0, 0.0, 0.0]
+  static_offset_left:
+    translation_m: [0.0, 0.0, 0.0]
+    rotation_wxyz: [1.0, 0.0, 0.0, 0.0]

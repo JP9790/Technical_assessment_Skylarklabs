@@ -1,0 +1,159 @@
+{
+  "timestamp_utc": "2026-08-30T20:10:52.179932+00:00",
+  "task": "Isaac-PickPlace-Cylinder-G129-Dex3-Joint",
+  "cycles": 1,
+  "object_init_z": 0.8399999737739563,
+  "object_final_z": 0.8999999761581421,
+  "robot_root_z": 0.7599999904632568,
+  "lift_delta_m": 0.06000000238418579,
+  "lift_success": true,
+  "segments": [
+    {
+      "label": "cycle0_1_arm_free_space",
+      "steps": 120,
+      "max_joint_delta": 2.8586537837982178,
+      "arm_joint_delta": 2.5994365215301514,
+      "palm_object_dist_m": 0.8291572332382202,
+      "object_z": -0.021254276856780052,
+      "ok": false
+    },
+    {
+      "label": "cycle0_2_hands_open",
+      "steps": 120,
+      "max_joint_delta": 3.0149099826812744,
+      "arm_joint_delta": 3.0023162364959717,
+      "palm_object_dist_m": 0.7780556678771973,
+      "object_z": -0.021268997341394424,
+      "ok": false
+    },
+    {
+      "label": "cycle0_2_hands_close",
+      "steps": 120,
+      "max_joint_delta": 3.010277032852173,
+      "arm_joint_delta": 2.9993784427642822,
+      "palm_object_dist_m": 0.747236430644989,
+      "object_z": -0.02130529098212719,
+      "ok": false
+    },
+    {
+      "label": "cycle0_2_hands_reopen",
+      "steps": 120,
+      "max_joint_delta": 3.0095157623291016,
+      "arm_joint_delta": 2.9981088638305664,
+      "palm_object_dist_m": 0.7441865801811218,
+      "object_z": -0.02126581221818924,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_index_0_joint",
+      "steps": 60,
+      "max_joint_delta": 3.006868362426758,
+      "arm_joint_delta": 3.0009427070617676,
+      "palm_object_dist_m": 0.7745128870010376,
+      "object_z": -0.021244756877422333,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_middle_0_joint",
+      "steps": 60,
+      "max_joint_delta": 3.0069797039031982,
+      "arm_joint_delta": 3.0055181980133057,
+      "palm_object_dist_m": 0.7984744310379028,
+      "object_z": -0.021250389516353607,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_thumb_0_joint",
+      "steps": 60,
+      "max_joint_delta": 3.007601022720337,
+      "arm_joint_delta": 3.0047800540924072,
+      "palm_object_dist_m": 0.815693199634552,
+      "object_z": -0.021255064755678177,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_index_1_joint",
+      "steps": 60,
+      "max_joint_delta": 3.0084264278411865,
+      "arm_joint_delta": 3.0006186962127686,
+      "palm_object_dist_m": 0.8281677961349487,
+      "object_z": -0.02130644954741001,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_middle_1_joint",
+      "steps": 60,
+      "max_joint_delta": 3.0105628967285156,
+      "arm_joint_delta": 3.0065605640411377,
+      "palm_object_dist_m": 0.7944868206977844,
+      "object_z": -0.021294238045811653,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_thumb_1_joint",
+      "steps": 60,
+      "max_joint_delta": 3.006199359893799,
+      "arm_joint_delta": 3.005659818649292,
+      "palm_object_dist_m": 0.8079121112823486,
+      "object_z": -0.021268950775265694,
+      "ok": false
+    },
+    {
+      "label": "finger_right_hand_thumb_2_joint",
+      "steps": 60,
+      "max_joint_delta": 3.006410837173462,
+      "arm_joint_delta": 2.9990336894989014,
+      "palm_object_dist_m": 0.8095651268959045,
+      "object_z": -0.021252013742923737,
+      "ok": false
+    },
+    {
+      "label": "cycle0_settle",
+      "steps": 40,
+      "max_joint_delta": 3.005589723587036,
+      "arm_joint_delta": 3.003260374069214,
+      "palm_object_dist_m": 0.7365648746490479,
+      "object_z": -0.022422896698117256,
+      "ok": false
+    },
+    {
+      "label": "cycle0_pre_grasp",
+      "steps": 80,
+      "max_joint_delta": 3.003108024597168,
+      "arm_joint_delta": 2.9964237213134766,
+      "palm_object_dist_m": 0.7340028882026672,
+      "object_z": -0.022422244772315025,
+      "ok": false
+    },
+    {
+      "label": "cycle0_grasp",
+      "steps": 80,
+      "max_joint_delta": 3.003277063369751,
+      "arm_joint_delta": 3.002903699874878,
+      "palm_object_dist_m": 0.7488919496536255,
+      "object_z": -0.022430112585425377,
+      "ok": false
+    },
+    {
+      "label": "cycle0_lift",
+      "steps": 120,
+      "max_joint_delta": 2.8550827503204346,
+      "arm_joint_delta": 2.8441390991210938,
+      "palm_object_dist_m": 0.9494773149490356,
+      "object_z": 0.8999999761581421,
+      "ok": false
+    },
+    {
+      "label": "cycle0_hold",
+      "steps": 60,
+      "max_joint_delta": 2.8554513454437256,
+      "arm_joint_delta": 2.8484814167022705,
+      "palm_object_dist_m": 0.9494500160217285,
+      "object_z": 0.8999999761581421,
+      "ok": false
+    }
+  ],
+  "all_segments_ok": false,
+  "elapsed_s": 139.0288987159729,
+  "phase1_sanity_status": "pass"
+}

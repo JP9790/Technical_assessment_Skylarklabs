@@ -1,0 +1,38 @@
+{
+  "timestamp_utc": "2026-08-30T06:21:37.623993+00:00",
+  "provisional_selection": "xr_teleoperate_demos",
+  "candidates": [
+    {
+      "name": "xr_teleoperate",
+      "url": "https://github.com/unitreerobotics/xr_teleoperate",
+      "artifact": "demonstration_dataset",
+      "checkpoint_verified": false,
+      "sim_compatible": "unitree_sim_isaaclab replay",
+      "recommended": true,
+      "blocker": null
+    },
+    {
+      "name": "dex3_rl_manipulation",
+      "url": "https://github.com/PabloKevin/dex3_rl_manipulation",
+      "artifact": "rl_checkpoint",
+      "checkpoint_verified": false,
+      "sim_compatible": "Isaac Lab G1 Dex3",
+      "recommended": false,
+      "blocker": "Public checkpoint link not confirmed"
+    },
+    {
+      "name": "unitree_sim_isaaclab",
+      "url": "https://github.com/unitreerobotics/unitree_sim_isaaclab",
+      "artifact": "sim_environment",
+      "checkpoint_verified": false,
+      "sim_compatible": "self",
+      "recommended": false,
+      "blocker": "Not a pretrained policy"
+    }
+  ],
+  "next_steps": [
+    "Clone xr_teleoperate and obtain or record a Dex3 pick-place demo",
+    "Verify dex3_rl_manipulation for downloadable checkpoint",
+    "Record exact observation/action dims after first sim launch (Phase 1)"
+  ]
+}

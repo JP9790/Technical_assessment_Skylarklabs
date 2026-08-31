@@ -1,0 +1,46 @@
+# Stage A evaluation settings (Phase 2)
+
+stage: A
+task: Isaac-PickPlace-Cylinder-G129-Dex3-Joint
+control_frequency_hz: 100.0
+
+source:
+  name: xr_teleoperate_sim_scripted_demos
+  repository: https://github.com/unitreerobotics/xr_teleoperate
+  commit: null  # filled by results/phase2/source_audit.json
+  license: Apache-2.0
+  artifact_type: demonstration_trajectory
+  demo_path: checkpoints/stage_A/demos/pick_place_cylinder/episode_0001/data.json
+  notes: >
+    No public bundled pick-place cylinder episodes in xr_teleoperate repo.
+    Demos recorded in compatible data.json format from Isaac Sim scripted policy.
+
+configurations:
+  C1_nominal:
+    description: Cylinder at nominal pose with small reset noise
+    pose_range: {x: [-0.02, 0.02], y: [-0.02, 0.02]}
+    mass_scale: 1.0
+  C2_pose_variation:
+    description: Object x/y randomized within task event bounds
+    pose_range: {x: [-0.05, 0.05], y: [-0.02, 0.05]}
+    mass_scale: 1.0
+  C3_mass_variation:
+    description: Moderate pose noise (mass randomization pending sim API)
+    pose_range: {x: [-0.03, 0.03], y: [-0.02, 0.04]}
+    mass_scale: 1.25
+  C4_held_out_pose:
+    description: Held-out initial pose (wider x/y — guide §10 C4)
+    pose_range: {x: [-0.06, 0.06], y: [-0.04, 0.06]}
+    mass_scale: 1.0
+
+evaluation:
+  trials_per_config: 10
+  success_criteria:
+    lift_delta_m_min: 0.03
+    max_xy_shift_m: 0.08
+  metrics:
+    - task_success_rate
+    - object_drops
+    - completion_time_s
+    - max_joint_delta
+    - lift_delta_m

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env_isaaclab/
+
+# Checkpoints and large assets (download separately)
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.zip
+external/unitree_sim_isaaclab/unitree_sim_isaaclab_usds/
+external/unitree_sim_isaaclab/assets/
+
+# Results and logs
+results/**/videos/
+*.log
+*.mp4
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Isaac / Omniverse caches
+**/.thumbs/
+**/kit/cache/

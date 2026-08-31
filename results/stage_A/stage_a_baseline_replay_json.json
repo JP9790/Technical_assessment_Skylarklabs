@@ -1,0 +1,98 @@
+{
+  "timestamp_utc": "2026-08-30T15:25:51.433043+00:00",
+  "stage": "A",
+  "task": "Isaac-PickPlace-Cylinder-G129-Dex3-Joint",
+  "mode": "replay_json",
+  "trials_per_config": 3,
+  "configurations": {
+    "C1_nominal": {
+      "trials": [
+        {
+          "trial": 0,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 10.1,
+          "object_drop": true
+        },
+        {
+          "trial": 1,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 10.0,
+          "object_drop": true
+        },
+        {
+          "trial": 2,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 9.9,
+          "object_drop": true
+        }
+      ],
+      "success_rate": 0.0,
+      "mean_lift_delta_m": -0.24100000000000002,
+      "mean_completion_time_s": 10.0,
+      "object_drops": 3
+    },
+    "C2_pose_variation": {
+      "trials": [
+        {
+          "trial": 0,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 9.9,
+          "object_drop": true
+        },
+        {
+          "trial": 1,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 9.8,
+          "object_drop": true
+        },
+        {
+          "trial": 2,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 10.1,
+          "object_drop": true
+        }
+      ],
+      "success_rate": 0.0,
+      "mean_lift_delta_m": -0.24100000000000002,
+      "mean_completion_time_s": 9.933333333333334,
+      "object_drops": 3
+    },
+    "C3_mass_variation": {
+      "trials": [
+        {
+          "trial": 0,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 10.1,
+          "object_drop": true
+        },
+        {
+          "trial": 1,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 9.9,
+          "object_drop": true
+        },
+        {
+          "trial": 2,
+          "success": false,
+          "lift_delta_m": -0.24100000000000002,
+          "completion_time_s": 10.1,
+          "object_drop": true
+        }
+      ],
+      "success_rate": 0.0,
+      "mean_lift_delta_m": -0.24100000000000002,
+      "mean_completion_time_s": 10.033333333333333,
+      "object_drops": 3
+    }
+  },
+  "overall_success_rate": 0.0,
+  "stage_a_status": "baseline_recorded"
+}

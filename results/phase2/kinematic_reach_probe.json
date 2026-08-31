@@ -1,0 +1,15 @@
+{
+  "tested": 864,
+  "best": {
+    "palm_object_dist_m": 0.4842957854270935,
+    "object_z": -0.022497130557894707,
+    "root_z": 0.7599999904632568,
+    "joints": {
+      "right_shoulder_pitch_joint": -0.8,
+      "right_shoulder_roll_joint": -1.2,
+      "right_shoulder_yaw_joint": 0.6,
+      "right_elbow_joint": 0.6,
+      "right_wrist_pitch_joint": 0.4
+    }
+  }
+}

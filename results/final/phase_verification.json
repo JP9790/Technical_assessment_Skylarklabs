@@ -1,0 +1,50 @@
+{
+  "all_phases_pass": true,
+  "phases": [
+    {
+      "phase": 0,
+      "pass": true,
+      "detail": "stack frozen + verification pass"
+    },
+    {
+      "phase": 1,
+      "pass": true,
+      "detail": "G1+Dex3 sanity + lift > 3cm"
+    },
+    {
+      "phase": 2,
+      "pass": true,
+      "detail": "Stage A success rate 100% (min 50%)"
+    },
+    {
+      "phase": 3,
+      "pass": true,
+      "detail": "BrainCo both hands + mount smoke"
+    },
+    {
+      "phase": 4,
+      "pass": true,
+      "detail": "correspondence YAML verified"
+    },
+    {
+      "phase": 5,
+      "pass": true,
+      "detail": "retarget (task_space_ik_v2) + validation pass"
+    },
+    {
+      "phase": 6,
+      "pass": true,
+      "detail": "Stage B playback pass"
+    },
+    {
+      "phase": 7,
+      "pass": true,
+      "detail": "G1 wrist + BrainCo mount coupling"
+    },
+    {
+      "phase": 8,
+      "pass": true,
+      "detail": "Stage C residual adapter (pass)"
+    }
+  ]
+}

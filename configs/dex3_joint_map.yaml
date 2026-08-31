@@ -1,0 +1,65 @@
+# Dex3 hand joint and link map — verified from Isaac Sim (Phase 1)
+# Source: configs/g1_dex3_source.yaml (extracted 2026-08-30)
+
+embodiment: "Unitree G1 29DoF + Dex3"
+hand_type: dex3
+hand_dof_per_side: 7
+total_hand_dof: 14
+control_frequency_hz: 100.0
+
+frames:
+  left_wrist: left_wrist_yaw_link
+  right_wrist: right_wrist_yaw_link
+  left_palm: left_hand_palm_link
+  right_palm: right_hand_palm_link
+  # Fingertip links not named *_tip in USD; use distal links for retargeting Phase 4
+  left_index_tip: left_hand_index_1_link
+  left_middle_tip: left_hand_middle_1_link
+  left_thumb_tip: left_hand_thumb_2_link
+  right_index_tip: right_hand_index_1_link
+  right_middle_tip: right_hand_middle_1_link
+  right_thumb_tip: right_hand_thumb_2_link
+
+joint_names:
+  left:
+    - left_hand_thumb_0_joint
+    - left_hand_thumb_1_joint
+    - left_hand_thumb_2_joint
+    - left_hand_middle_0_joint
+    - left_hand_middle_1_joint
+    - left_hand_index_0_joint
+    - left_hand_index_1_joint
+  right:
+    - right_hand_thumb_0_joint
+    - right_hand_thumb_1_joint
+    - right_hand_thumb_2_joint
+    - right_hand_middle_0_joint
+    - right_hand_middle_1_joint
+    - right_hand_index_0_joint
+    - right_hand_index_1_joint
+
+# Indices into full 43-DoF robot joint vector (sim order)
+joint_indices_in_robot_state:
+  - 31
+  - 37
+  - 41
+  - 30
+  - 36
+  - 29
+  - 35
+  - 34
+  - 40
+  - 42
+  - 33
+  - 39
+  - 32
+  - 38
+
+action_joint_order_note: >
+  JointPositionAction uses interleaved left/right ordering (see g1_dex3_source.yaml
+  joints.all_names). Use scripts/phase1/action_utils.py for scripted control.
+
+actuator_groups:
+  preset: g1_29dof_dex3_base_fix
+  include_waist: false
+  base_config: G129_CFG_WITH_DEX3_BASE_FIX

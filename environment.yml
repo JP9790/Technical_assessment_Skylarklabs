@@ -1,0 +1,13 @@
+# Minimal Python deps for Phase 0 verification scripts (no Isaac Sim pip install).
+# Full sim stack uses the legion Isaac Sim / Isaac Lab install via scripts/env_legion.sh.
+
+name: g1_brainco_retarget
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pyyaml
+  - numpy
+  - pip:
+      - pyzmq  # used by unitree_sim_isaaclab image_server

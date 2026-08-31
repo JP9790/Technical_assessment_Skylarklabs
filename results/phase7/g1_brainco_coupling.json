@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-08-31T00:04:25.973818+00:00",
+  "demo": "/home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json",
+  "wrist_frames_captured": 143,
+  "brainco_mount_validation": {
+    "samples": 8,
+    "max_joint_track_error": 0.005926788318902254,
+    "mount_pass": true
+  },
+  "phase7_status": "pass"
+}

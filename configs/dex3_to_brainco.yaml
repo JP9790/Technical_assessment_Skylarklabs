@@ -1,0 +1,139 @@
+status: phase4_complete
+updated_at_utc: '2026-08-30T20:58:33.064231+00:00'
+source_embodiment: Unitree G1 29DoF + Dex3
+target_embodiment: Unitree G1 29DoF + BrainCo Revo2 Touch
+correspondence_table: configs/correspondence_table.yaml
+target_asset:
+  repository: https://github.com/BrainCoTech/brainco-description
+  commit: f332a6f0dc944e26b82976b637074b03f7ee8a2c
+  usd_right: assets/brainco/revo2_system/usd/revo2_right.usd
+  usd_left: assets/brainco/revo2_system/usd/revo2_left.usd
+mount_transform:
+  description: 'BrainCo hand base is rigidly attached at G1 wrist yaw link. Full USD
+    swap on G1 is Phase 4b; smoke-validated via g1_brainco_attachment_smoke.json.
+
+    '
+  source_mount_link_right: right_wrist_yaw_link
+  source_mount_link_left: left_wrist_yaw_link
+  target_mount_link_right: right_hand_base_link
+  target_mount_link_left: left_hand_base_link
+  static_offset_right:
+    translation_m:
+    - 0.0
+    - 0.0
+    - 0.0
+    rotation_wxyz:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  static_offset_left:
+    translation_m:
+    - 0.0
+    - 0.0
+    - 0.0
+    rotation_wxyz:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+retargeting:
+  method: task_space_ik
+  wrist:
+    source_frame_right: right_wrist_yaw_link
+    target_frame_right: right_hand_base_link
+    source_frame_left: left_wrist_yaw_link
+    target_frame_left: left_hand_base_link
+    weight_position: 1.0
+    weight_orientation: 1.0
+  palm:
+    source_frame_right: right_hand_palm_link
+    target_frame_right: right_hand_base_link
+    source_frame_left: left_hand_palm_link
+    target_frame_left: left_hand_base_link
+    weight_position: 0.8
+    weight_orientation: 0.8
+  fingertips:
+    thumb:
+      source_right: right_hand_thumb_2_link
+      target_right: right_thumb_tip
+      source_left: left_hand_thumb_2_link
+      target_left: left_thumb_tip
+      weight: 3.0
+    index:
+      source_right: right_hand_index_1_link
+      target_right: right_index_tip
+      source_left: left_hand_index_1_link
+      target_left: left_index_tip
+      weight: 2.5
+    middle:
+      source_right: right_hand_middle_1_link
+      target_right: right_middle_tip
+      source_left: left_hand_middle_1_link
+      target_left: left_middle_tip
+      weight: 1.5
+    ring:
+      source_right: null
+      target_right: right_ring_tip
+      source_left: null
+      target_left: left_ring_tip
+      weight: 0.0
+    pinky:
+      source_right: null
+      target_right: right_pinky_tip
+      source_left: null
+      target_left: left_pinky_tip
+      weight: 0.0
+  joint_regularization:
+    weight: 0.05
+    neutral_pose: brainco_default_open
+  constraints:
+    joint_limits: true
+    max_iterations: 100
+    tolerance: 0.0001
+  action_mapping:
+    source_dof: 14
+    target_dof_actuated: 12
+    source_type: joint_position
+    target_type: joint_position
+    retargeting_function: task_space_ik_then_mimic_expand
+    note: "Map 14-D Dex3 demo/policy hand slice \u2192 12-D BrainCo actuated; mimic\
+      \ joints expanded in sim."
+  contacts:
+    enabled: false
+    source: none_on_dex3_usd
+    target_touch_links: []
+    mapping: deferred_phase5
+neutral_poses:
+  dex3_open:
+    right_hand_index_0_joint: 0.1
+    right_hand_index_1_joint: 0.1
+    right_hand_middle_0_joint: 0.1
+    right_hand_middle_1_joint: 0.1
+    right_hand_thumb_0_joint: 0.0
+    right_hand_thumb_1_joint: -0.2
+    right_hand_thumb_2_joint: -0.1
+    left_hand_index_0_joint: 0.1
+    left_hand_index_1_joint: 0.1
+    left_hand_middle_0_joint: 0.1
+    left_hand_middle_1_joint: 0.1
+    left_hand_thumb_0_joint: 0.0
+    left_hand_thumb_1_joint: -0.2
+    left_hand_thumb_2_joint: -0.1
+  brainco_open:
+    right_thumb_metacarpal_joint: 0.0
+    right_thumb_proximal_joint: 0.0
+    right_index_proximal_joint: 0.0
+    right_middle_proximal_joint: 0.0
+    right_ring_proximal_joint: 0.0
+    right_pinky_proximal_joint: 0.0
+    left_thumb_metacarpal_joint: 0.0
+    left_thumb_proximal_joint: 0.0
+    left_index_proximal_joint: 0.0
+    left_middle_proximal_joint: 0.0
+    left_ring_proximal_joint: 0.0
+    left_pinky_proximal_joint: 0.0
+dof_summary:
+  dex3_per_hand: 7
+  brainco_actuated_per_hand: 6
+  brainco_revolute_per_hand: 11

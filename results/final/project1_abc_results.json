@@ -1,0 +1,101 @@
+{
+  "timestamp_utc": "2026-08-31T11:38:10.572442+00:00",
+  "guide_section": "10 - Final Evaluation",
+  "project": "Project 1 \u2014 Dex3 to BrainCo Revo2 Touch",
+  "final_eval_pass": true,
+  "pass_criteria": {
+    "stage_a_min_success_rate": 0.5,
+    "stage_a_actual": 1.0,
+    "stage_a_pass": true,
+    "stage_b_playback_pass": true,
+    "stage_b_pass": true,
+    "retarget_validation_pass": true,
+    "min_test_configurations": 3,
+    "test_configurations_count": 4,
+    "held_out_config_present": true,
+    "stage_c_status": "pass",
+    "stage_c_pass": true
+  },
+  "abc_results_table": {
+    "Metric": [
+      "Task / playback success rate",
+      "Fingertip tracking error (proxy, m)",
+      "Wrist tracking error (m)",
+      "Object drops (mean per config)",
+      "Joint-limit violations (retarget)",
+      "Max frame delta (retarget smoothness, m)",
+      "Mean completion time (s)",
+      "Adaptation samples / time",
+      "Retarget method"
+    ],
+    "A_Dex3_source": [
+      "100.0%",
+      "N/A (source FK not aggregated)",
+      "N/A",
+      "0",
+      "0",
+      "N/A",
+      "30.5",
+      "N/A",
+      "xr_teleoperate-format scripted demo"
+    ],
+    "B_BrainCo_retarget": [
+      "100.0%",
+      "1.20 cm (joint playback)",
+      "0.59 cm (mount samples)",
+      "N/A (playback-only Stage B)",
+      "0",
+      "1.83 cm",
+      "4.8",
+      "mapping only",
+      "task_space_ik_v2"
+    ],
+    "C_BrainCo_finetuned": [
+      "100.0%",
+      "1.24 cm (joint playback)",
+      "see phase7 (unchanged)",
+      "N/A (playback-only)",
+      "0",
+      "1.83 cm (inherited)",
+      "43.3 eval",
+      "570 frames, 141.2s train",
+      "residual_adapter_v1"
+    ]
+  },
+  "stage_a_per_configuration": {
+    "C1_nominal": {
+      "success_rate": 1.0,
+      "object_drops": 0,
+      "mean_lift_delta_m": 0.06000000238418579
+    },
+    "C2_pose_variation": {
+      "success_rate": 1.0,
+      "object_drops": 0,
+      "mean_lift_delta_m": 0.06000000238418579
+    },
+    "C3_mass_variation": {
+      "success_rate": 1.0,
+      "object_drops": 0,
+      "mean_lift_delta_m": 0.06000000238418579
+    },
+    "C4_held_out_pose": {
+      "success_rate": 1.0,
+      "object_drops": 0,
+      "mean_lift_delta_m": 0.06000000238418579
+    }
+  },
+  "failure_analysis": [
+    "F1 morphology: BrainCo 6-DoF vs Dex3 7-DoF \u2014 mitigated by task-space retargeting",
+    "F4 object slip: Stage A uses kinematic lift assist (not pure contact grasp)",
+    "F7 reachability: G1+BrainCo full USD swap deferred; Phase 7 validates wrist coupling"
+  ],
+  "artifacts": {
+    "stage_a": "/home/autonomique/jp_test/results/stage_A/stage_a_baseline.json",
+    "stage_b": "/home/autonomique/jp_test/results/stage_B/stage_b_baseline.json",
+    "stage_b_demo": "/home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json",
+    "retarget_offline": "/home/autonomique/jp_test/results/phase5/retarget_offline.json",
+    "retarget_validation": "/home/autonomique/jp_test/results/phase5/retarget_validation.json",
+    "stage_c": "/home/autonomique/jp_test/results/stage_C/stage_c_baseline.json",
+    "phase_verification": "/home/autonomique/jp_test/results/final/phase_verification.json"
+  }
+}

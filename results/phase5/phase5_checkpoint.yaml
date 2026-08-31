@@ -1,0 +1,13 @@
+timestamp_utc: '2026-08-31T00:03:20.792831+00:00'
+phase: 5
+status: complete
+guide_section: 7 - Task-space retargeting optimizer
+retarget_method: semantic_joint_map_v1
+source_demo: /home/autonomique/jp_test/checkpoints/stage_A/demos/pick_place_cylinder/episode_0001/data.json
+output_demo: /home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json
+offline_retarget_pass: true
+validation_pass: true
+prerequisites:
+  phase2_status: complete
+  phase4_status: complete
+next_phase: "Phase 6 \u2014 Stage B BrainCo playback evaluation"

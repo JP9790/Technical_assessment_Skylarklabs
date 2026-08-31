@@ -1,0 +1,24 @@
+timestamp_utc: '2026-08-30T20:58:30+00:00'
+phase: 3
+status: complete
+target_asset: BrainCo Revo2 (brainco-description revo2_system @ f332a6f0)
+guide_5_3:
+  joint_sweep: pass
+  open_close: pass
+  cylinder_in_palm_grasp: pass
+  wrist_move_with_grasp: pass
+guide_5_4:
+  wrist_pose_capture: pass
+  brainco_mount_smoke: pass
+  full_usd_swap_on_g1: deferred
+right_hand_status: pass
+left_hand_status: pass
+right_joints: 11
+left_joints: 11
+config: configs/g1_brainco_target.yaml
+retargeting_config: configs/dex3_to_brainco.yaml
+artifacts:
+  - results/phase3/brainco_right_hand_test.json
+  - results/phase3/brainco_left_hand_test.json
+  - results/phase3/g1_brainco_attachment_smoke.json
+next_phase: Phase 4 — semantic Dex3-to-BrainCo retargeting

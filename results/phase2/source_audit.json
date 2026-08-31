@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-08-30T18:57:29.148369+00:00",
+  "selected_source": "xr_teleoperate_sim_scripted_demos",
+  "selection_status": "confirmed_provisional",
+  "candidates": [
+    {
+      "name": "xr_teleoperate",
+      "url": "https://github.com/unitreerobotics/xr_teleoperate",
+      "local_path": "/home/autonomique/jp_test/external/xr_teleoperate",
+      "commit": "845b25a32f7febedf220e830952a7134897adb9d",
+      "license": "Apache-2.0",
+      "artifact_type": "demonstration_trajectory",
+      "artifact_available": true,
+      "checkpoint_verified": false,
+      "notes": "Cloned; public repo has no bundled pick-place episodes. Stage A uses sim-recorded data.json in compatible format.",
+      "verdict": "selected"
+    },
+    {
+      "name": "dex3_rl_manipulation",
+      "url": "https://github.com/PabloKevin/dex3_rl_manipulation",
+      "local_path": null,
+      "commit": null,
+      "artifact_type": "rl_policy_checkpoint",
+      "artifact_available": false,
+      "checkpoint_verified": false,
+      "notes": "Repository not found (404) as of Phase 2 audit.",
+      "verdict": "unavailable"
+    },
+    {
+      "name": "G1_Dex3_ObjectPlacement_Dataset",
+      "url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex3_ObjectPlacement_Dataset",
+      "artifact_type": "lerobot_parquet_dataset",
+      "artifact_available": true,
+      "checkpoint_verified": true,
+      "notes": "210 teleop episodes, 28-dim arm+hand state/action; different task (object placement) \u2014 reference only.",
+      "verdict": "reference_motion_prior"
+    }
+  ],
+  "stage_a_interface": {
+    "embodiment": "Unitree G1 29DoF + Dex3",
+    "task": "Isaac-PickPlace-Cylinder-G129-Dex3-Joint",
+    "observation_space": "joint_state (43) + camera_image (optional)",
+    "action_space": "joint_position_offset (43,) via JointPositionAction",
+    "control_frequency_hz": 100.0,
+    "demo_format": "xr_teleoperate episode_xxxx/data.json"
+  }
+}

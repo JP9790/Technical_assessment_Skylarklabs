@@ -1,0 +1,7 @@
+{
+  "timestamp_utc": "2026-08-31T11:32:10.440372+00:00",
+  "dataset": "/home/autonomique/jp_test/results/stage_C/residual_dataset.npz",
+  "num_frames": 570,
+  "mean_abs_delta_right": 0.012480676343329783,
+  "mean_abs_delta_left": 0.020748922863523162
+}

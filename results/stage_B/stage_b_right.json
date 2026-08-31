@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-08-31T00:03:37.712467+00:00",
+  "stage": "B",
+  "demo": "/home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json",
+  "subsample": 2,
+  "overall_success": true,
+  "stage_b_status": "pass",
+  "right_hand": {
+    "side": "right",
+    "frames_played": 285,
+    "max_joint_track_error": 0.011937379837036133,
+    "max_cmd_delta": 0.03850491459044192,
+    "completion_time_s": 4.554109811782837,
+    "playback_pass": true
+  }
+}

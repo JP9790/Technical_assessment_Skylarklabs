@@ -1,0 +1,7 @@
+timestamp_utc: '2026-08-31T11:38:10.572442+00:00'
+phase: 8
+status: complete
+guide_section: 10 - Final Evaluation
+final_eval_pass: true
+abc_results_json: /home/autonomique/jp_test/results/final/project1_abc_results.json
+abc_results_md: /home/autonomique/jp_test/results/final/project1_abc_results.md

@@ -1,0 +1,7 @@
+{
+  "timestamp_utc": "2026-08-31T11:34:34.594633+00:00",
+  "method": "residual_adapter_v1",
+  "output_demo": "checkpoints/stage_C/demos/pick_place_cylinder/episode_0001/data.json",
+  "num_frames": 570,
+  "max_frame_delta": 0.024531065958163345
+}

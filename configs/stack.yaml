@@ -1,0 +1,83 @@
+# Phase 0 — Frozen software stack for Project 1
+# Dex3 → BrainCo Revo2 Touch embodiment transfer on Unitree G1 29DoF
+# Host: autonomique-legion (do not modify files outside jp_test)
+
+project:
+  name: g1_brainco_retarget
+  assignment: "Project 1 — Dex-to-BrainCo Hand Retargeting"
+  phase: 0
+  frozen_date: "2026-08-29"
+  workspace: /home/autonomique/jp_test
+
+host:
+  hostname: autonomique-legion
+  os: "Ubuntu 24.04 (kernel 7.0.0-30-generic)"
+  gpu: "NVIDIA GeForce RTX 5090 (32 GB)"
+  gpu_driver: "595.84"
+
+simulator:
+  name: NVIDIA Isaac Sim
+  version: "6.0.0-rc.59+release.41464.5f2772bc.gl"
+  install_path: /home/autonomique/AVSR/isaac_sim
+  launch_script: /home/autonomique/AVSR/isaac_sim/isaac-sim.sh
+  python_script: /home/autonomique/AVSR/isaac_sim/python.sh
+  note: >
+    unitree_sim_isaaclab README lists Isaac Sim 4.5 / 5.x as tested.
+    Legion uses 6.0.0-rc.59; compatibility must be verified in Phase 1.
+    setup_conda_env.sh is missing in the current Isaac Sim tree — use
+    scripts/env_legion.sh to set PYTHONPATH manually.
+
+isaac_lab:
+  name: Isaac Lab
+  install_path: /home/autonomique/AVSR/IsaacLab
+  launch_script: /home/autonomique/AVSR/IsaacLab/isaaclab.sh
+  commit: ad5b07e33e56f1e4c62e94e753c6b82f95972611
+  tag: perf-2026-06-24-5-gad5b07e33e
+
+source_simulation:
+  name: unitree_sim_isaaclab
+  url: https://github.com/unitreerobotics/unitree_sim_isaaclab
+  local_path: /home/autonomique/jp_test/external/unitree_sim_isaaclab
+  commit: e30c25b1dffdf92ada1d6c8c1fe9a47bdde0fecc
+  license: Apache-2.0
+  source_embodiment: "Unitree G1 29DoF + Dex3 hands"
+  primary_dex3_task: Isaac-PickPlace-Cylinder-G129-Dex3-Joint
+  dex3_tasks:
+    - Isaac-PickPlace-Cylinder-G129-Dex3-Joint
+    - Isaac-PickPlace-RedBlock-G129-Dex3-Joint
+    - Isaac-Stack-RgyBlock-G129-Dex3-Joint
+    - Isaac-Move-Cylinder-G129-Dex3-Wholebody
+    - Isaac-Pick-RedBlock-Into-Drawer-G129-Dex3-Joint
+  assets:
+    source: https://huggingface.co/datasets/unitreerobotics/unitree_sim_isaaclab_usds
+    fetch_script: external/unitree_sim_isaaclab/fetch_assets.sh
+    status: downloaded
+    local_path: external/unitree_sim_isaaclab/assets
+
+retargeting_reference:
+  name: GMR (General Motion Retargeting)
+  url: https://github.com/YanjieZe/GMR
+  local_path: /home/autonomique/jp_test/external/GMR
+  commit: bb1bbe40774794fceb2a7c579a3464a28e68c844
+  role: "Task-space / IK retargeting reference — adapt for Dex3→BrainCo hand mapping in Phase 4"
+
+target_embodiment:
+  name: BrainCo Revo2 Touch
+  status: available_phase3
+  source: external/brainco-description @ f332a6f0
+  usd_path: assets/brainco/revo2_system/usd/
+  note: >
+    Official BrainCo public Revo2 assets (brainco-description). Assessment vendor
+    bundle was not on legion; documented deviation in docs/phase3_brainco_bringup.md.
+
+control:
+  sim_control_mode: joint_position_targets  # via Isaac Lab articulation + DDS
+  dex3_dds_flag: --enable_dex3_dds
+  robot_type_flag: --robot_type g129
+  default_launch_task: Isaac-PickPlace-Cylinder-G129-Dex3-Joint
+  dds_publish_interval_ms: 20  # from dex3_state.py
+
+experiment_stages:
+  A: "Source baseline — G1 + Dex3 + existing policy / demonstrations"
+  B: "Retargeting only — G1 + BrainCo, no task-specific fine-tuning"
+  C: "Retargeting + limited simulation fine-tuning (residual adapter)"

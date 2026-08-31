@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-08-30T19:33:41.338863+00:00",
+  "task": "Isaac-PickPlace-Cylinder-G129-Dex3-Joint",
+  "episode_dir": "/home/autonomique/jp_test/checkpoints/stage_A/demos/pick_place_cylinder/episode_0001",
+  "data_json": "/home/autonomique/jp_test/checkpoints/stage_A/demos/pick_place_cylinder/episode_0001/data.json",
+  "num_steps": 570,
+  "object_init_z": 0.8399999737739563,
+  "object_final_z": 0.8999999761581421,
+  "lift_delta_m": 0.06000000238418579,
+  "lift_success": true,
+  "source_type": "sim_scripted_demo",
+  "format": "xr_teleoperate_data.json"
+}

@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-08-30T20:58:28.964820+00:00",
+  "guide_section": "5.4 Attach BrainCo to G1",
+  "g1_wrist_capture": {
+    "wrist_poses": [
+      {
+        "label": "standing",
+        "position": [
+          0.05046587437391281,
+          -0.09652360528707504,
+          0.6014553308486938
+        ],
+        "orientation_wxyz": [
+          0.6981680393218994,
+          -0.004162711091339588,
+          0.009328637272119522,
+          0.7158609628677368
+        ]
+      },
+      {
+        "label": "reach",
+        "position": [
+          -0.1207745224237442,
+          -0.2441759556531906,
+          0.20646174252033234
+        ],
+        "orientation_wxyz": [
+          0.7909268140792847,
+          -0.32528117299079895,
+          -0.5084823369979858,
+          -0.10036193579435349
+        ]
+      }
+    ],
+    "source_frames": {
+      "source_frame_right": "right_wrist_yaw_link",
+      "target_frame_right": "right_hand_base_link",
+      "source_frame_left": "left_wrist_yaw_link",
+      "target_frame_left": "left_hand_base_link",
+      "weight_position": 1.0,
+      "weight_orientation": 1.0
+    }
+  },
+  "brainco_mount_smoke": {
+    "brainco_spawned": true,
+    "usd_path": "/home/autonomique/jp_test/assets/brainco/revo2_system/usd/revo2_right.usd",
+    "joints": 11,
+    "bodies": 23,
+    "mount_position": [
+      -0.1207745224237442,
+      -0.2441759556531906,
+      0.20646174252033234
+    ]
+  },
+  "attachment_status": "pass",
+  "note": "Full USD swap on G1 wrists deferred to Phase 4; wrist-frame capture + mount smoke validated."
+}

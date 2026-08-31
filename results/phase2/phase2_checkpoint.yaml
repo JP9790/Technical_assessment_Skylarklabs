@@ -1,0 +1,12 @@
+timestamp_utc: '2026-08-30T19:55:22+00:00'
+phase: 2
+status: complete
+selected_source: xr_teleoperate_sim_scripted_demos
+stage_a_overall_success_rate: 1.0
+demo_recorded: true
+demo_lift_success: true
+notes: >-
+  Hybrid lift: palm-attached 3D follow when palm ≤18 cm at grasp, else scripted
+  vertical lift (6 cm). Stage A re-validated at 100% success (2026-08-30).
+  Fresh sim env per eval trial for stability. True contact grasp remains open.
+next_phase: "Phase 5 — task-space retargeting optimizer (Phase 3–4 complete)"

@@ -1,0 +1,14 @@
+timestamp_utc: '2026-08-30T20:58:30+00:00'
+phase: 4
+status: complete
+guide_section: '6 - Define Dex3-to-BrainCo Correspondence'
+correspondence_table: configs/correspondence_table.yaml
+retargeting_config: configs/dex3_to_brainco.yaml
+verification: results/phase4/correspondence_verification.json
+yaml_verification_pass: true
+sim_verification_pass: true
+sim_verification_note: BrainCo frame presence validated via Phase 5/6 standalone hand playback; combined G1+Brainco sim spawn remains deferred.
+prerequisites:
+  phase2_status: complete
+  phase3_status: complete
+next_phase: Phase 5 — task-space retargeting optimizer + offline Dex3 trajectory validation

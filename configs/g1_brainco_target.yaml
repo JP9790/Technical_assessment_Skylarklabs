@@ -1,0 +1,193 @@
+extracted_at_utc: '2026-08-30T20:19:59.016903+00:00'
+embodiment: BrainCo Revo2 Touch (official brainco-description)
+source_repository: https://github.com/BrainCoTech/brainco-description
+source_commit: f332a6f0dc944e26b82976b637074b03f7ee8a2c
+license: Check repository LICENSE at clone time
+deviation_note: Assessment vendor bundle not found on legion; using BrainCoTech public
+  revo2_system USD/URDF (Revo2 dexterous hand). Touch sensor links present in URDF.
+control:
+  hand_dof_per_side: 6
+  total_hand_dof_bimanual: 12
+  distal_joints: mimic_coupled_to_proximal
+  control_frequency_hz: 100.0
+right_hand:
+  usd_path: assets/brainco/revo2_system/usd/revo2_right.usd
+  urdf_path: external/brainco-description/revo2_system/urdf/revo2_right.urdf
+  base_link: right_hand_base_link
+  wrist_mount_link: right_hand_base_link
+  palm_link: right_hand_base_link
+  fingertip_links:
+    thumb: right_thumb_tip
+    index: right_index_tip
+    middle: right_middle_tip
+    ring: right_ring_tip
+    pinky: right_pinky_tip
+  touch_links: []
+  actuated_joint_names:
+  - right_thumb_metacarpal_joint
+  - right_thumb_proximal_joint
+  - right_index_proximal_joint
+  - right_middle_proximal_joint
+  - right_ring_proximal_joint
+  - right_pinky_proximal_joint
+  all_revolute_joints:
+  - right_thumb_metacarpal_joint
+  - right_thumb_proximal_joint
+  - right_thumb_distal_joint
+  - right_index_proximal_joint
+  - right_index_distal_joint
+  - right_middle_proximal_joint
+  - right_middle_distal_joint
+  - right_ring_proximal_joint
+  - right_ring_distal_joint
+  - right_pinky_proximal_joint
+  - right_pinky_distal_joint
+  joint_limits:
+    right_thumb_metacarpal_joint:
+      lower: 0.0
+      upper: 1.57
+      effort: 0.5
+      velocity: 2.6175
+    right_thumb_proximal_joint:
+      lower: 0.0
+      upper: 1.03
+      effort: 1.1
+      velocity: 2.5303
+    right_index_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    right_middle_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    right_ring_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    right_pinky_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+  mimic_joints:
+    right_thumb_distal_joint:
+      joint: right_thumb_proximal_joint
+      multiplier: 1.0
+      offset: 0.0
+    right_index_distal_joint:
+      joint: right_index_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    right_middle_distal_joint:
+      joint: right_middle_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    right_ring_distal_joint:
+      joint: right_ring_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    right_pinky_distal_joint:
+      joint: right_pinky_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+  total_links: 23
+  hand_dof_actuated: 6
+left_hand:
+  usd_path: assets/brainco/revo2_system/usd/revo2_left.usd
+  urdf_path: external/brainco-description/revo2_system/urdf/revo2_left.urdf
+  base_link: left_hand_base_link
+  wrist_mount_link: left_hand_base_link
+  palm_link: left_hand_base_link
+  fingertip_links:
+    thumb: left_thumb_tip
+    index: left_index_tip
+    middle: left_middle_tip
+    ring: left_ring_tip
+    pinky: left_pinky_tip
+  touch_links: []
+  actuated_joint_names:
+  - left_thumb_metacarpal_joint
+  - left_thumb_proximal_joint
+  - left_index_proximal_joint
+  - left_middle_proximal_joint
+  - left_ring_proximal_joint
+  - left_pinky_proximal_joint
+  all_revolute_joints:
+  - left_thumb_metacarpal_joint
+  - left_thumb_proximal_joint
+  - left_thumb_distal_joint
+  - left_index_proximal_joint
+  - left_index_distal_joint
+  - left_middle_proximal_joint
+  - left_middle_distal_joint
+  - left_ring_proximal_joint
+  - left_ring_distal_joint
+  - left_pinky_proximal_joint
+  - left_pinky_distal_joint
+  joint_limits:
+    left_thumb_metacarpal_joint:
+      lower: 0.0
+      upper: 1.57
+      effort: 0.5
+      velocity: 2.6175
+    left_thumb_proximal_joint:
+      lower: 0.0
+      upper: 1.03
+      effort: 1.1
+      velocity: 2.5303
+    left_index_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    left_middle_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    left_ring_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+    left_pinky_proximal_joint:
+      lower: 0.0
+      upper: 1.41
+      effort: 2.0
+      velocity: 2.2685
+  mimic_joints:
+    left_thumb_distal_joint:
+      joint: left_thumb_proximal_joint
+      multiplier: 1.0
+      offset: 0.0
+    left_index_distal_joint:
+      joint: left_index_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    left_middle_distal_joint:
+      joint: left_middle_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    left_ring_distal_joint:
+      joint: left_ring_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+    left_pinky_distal_joint:
+      joint: left_pinky_proximal_joint
+      multiplier: 1.155
+      offset: 0.0
+  total_links: 23
+  hand_dof_actuated: 6
+g1_attachment:
+  status: planned_phase3b
+  replace_links:
+  - right_hand_*
+  - left_hand_*
+  mount_parent_links:
+  - right_wrist_yaw_link
+  - left_wrist_yaw_link
+  notes: Swap Dex3 hand USD subtree on G1 29DoF; keep arm/body actuators unchanged.

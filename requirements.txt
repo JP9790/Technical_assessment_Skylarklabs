@@ -1,0 +1,2 @@
+# Phase 0 verification only
+pyyaml>=6.0

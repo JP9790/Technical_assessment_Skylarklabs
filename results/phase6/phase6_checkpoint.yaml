@@ -1,0 +1,9 @@
+timestamp_utc: '2026-08-31T00:03:58.009012+00:00'
+phase: 6
+status: complete
+guide_section: 8 - Stage B retargeting-only playback
+stage_b_status: pass
+demo: /home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json
+prerequisites:
+  phase5_status: complete
+next_phase: "Phase 7 \u2014 Stage C simulation fine-tuning (optional)"

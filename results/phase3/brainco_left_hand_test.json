@@ -1,0 +1,117 @@
+{
+  "timestamp_utc": "2026-08-30T20:57:49.166043+00:00",
+  "hand": "left",
+  "usd_path": "/home/autonomique/jp_test/assets/brainco/revo2_system/usd/revo2_left.usd",
+  "num_joints": 11,
+  "num_bodies": 23,
+  "actuated_joints": [
+    "left_thumb_metacarpal_joint",
+    "left_thumb_proximal_joint",
+    "left_index_proximal_joint",
+    "left_middle_proximal_joint",
+    "left_ring_proximal_joint",
+    "left_pinky_proximal_joint"
+  ],
+  "joint_limits_sample": {
+    "left_thumb_metacarpal_joint": [
+      0.0,
+      1.5699999332427979
+    ],
+    "left_thumb_proximal_joint": [
+      0.0,
+      1.0299999713897705
+    ],
+    "left_index_proximal_joint": [
+      0.0,
+      1.4099998474121094
+    ],
+    "left_middle_proximal_joint": [
+      0.0,
+      1.4099998474121094
+    ],
+    "left_ring_proximal_joint": [
+      0.0,
+      1.4099998474121094
+    ],
+    "left_pinky_proximal_joint": [
+      0.0,
+      1.4099998474121094
+    ]
+  },
+  "kinematic_tests": [
+    {
+      "test": "kin_joint_left_thumb_metacarpal_joint",
+      "target": 0.9419999599456786,
+      "max_error": 0.002205479145049982,
+      "ok": true
+    },
+    {
+      "test": "kin_joint_left_thumb_proximal_joint",
+      "target": 0.6179999828338623,
+      "max_error": 0.00028597116470341355,
+      "ok": true
+    },
+    {
+      "test": "kin_joint_left_index_proximal_joint",
+      "target": 0.8459999084472656,
+      "max_error": 0.003712546825408891,
+      "ok": true
+    },
+    {
+      "test": "kin_joint_left_middle_proximal_joint",
+      "target": 0.8459999084472656,
+      "max_error": 0.0031822443008422407,
+      "ok": true
+    },
+    {
+      "test": "kin_joint_left_ring_proximal_joint",
+      "target": 0.8459999084472656,
+      "max_error": 0.003244829177856401,
+      "ok": true
+    },
+    {
+      "test": "kin_joint_left_pinky_proximal_joint",
+      "target": 0.8459999084472656,
+      "max_error": 0.003955078124999956,
+      "ok": true
+    },
+    {
+      "test": "kin_open_hand",
+      "max_error": 0.0018062189919874072,
+      "ok": true
+    },
+    {
+      "test": "kin_close_hand",
+      "max_error": 0.1154772520065308,
+      "ok": true
+    },
+    {
+      "test": "cylinder_grasp_lift",
+      "cylinder_z_delta_close": -7.587671279907227e-05,
+      "cylinder_travel_with_wrist_m": 0.3097299337387085,
+      "ok": true
+    }
+  ],
+  "pd_tests": [
+    {
+      "test": "pd_left_thumb_metacarpal_joint",
+      "max_error": 0.5653362274169922,
+      "ok": false
+    },
+    {
+      "test": "pd_left_thumb_proximal_joint",
+      "max_error": 0.21051639318466187,
+      "ok": false
+    }
+  ],
+  "cylinder_z_before_close": 0.5939615368843079,
+  "cylinder_z_after_close": 0.5938856601715088,
+  "phase3_hand_status": "pass",
+  "guide_5_3_checklist": {
+    "joint_sweep": true,
+    "open_close": true,
+    "cylinder_in_palm_grasp": true,
+    "wrist_move_with_grasp": true
+  },
+  "elapsed_s": 19.52348279953003
+}

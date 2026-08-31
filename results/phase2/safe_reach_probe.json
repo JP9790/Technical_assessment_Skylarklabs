@@ -1,0 +1,26 @@
+{
+  "tested": 648,
+  "best": {
+    "score": 999.0,
+    "palm_object_dist_m": 0.7349758744239807,
+    "object_z": -0.022227229550480843,
+    "object_on_table": false,
+    "palm": [
+      0.03192515671253204,
+      -0.22740048170089722,
+      0.20112209022045135
+    ],
+    "object": [
+      -0.34042951464653015,
+      0.3656059205532074,
+      -0.022227229550480843
+    ],
+    "joints": {
+      "right_shoulder_pitch_joint": -1.8,
+      "right_shoulder_roll_joint": -1.4,
+      "right_shoulder_yaw_joint": -0.8,
+      "right_elbow_joint": 0.9,
+      "right_wrist_pitch_joint": -1.0
+    }
+  }
+}

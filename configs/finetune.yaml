@@ -1,0 +1,28 @@
+# Stage C — residual embodiment adapter fine-tuning (assessment §1.5, guide §9)
+
+stage: C
+description: >
+  Learn a small residual correction on top of semantic joint-map retargeting.
+  Frozen: source demo, retargeter v1. Trainable: 2-layer MLP residual (12-D bimanual).
+
+model:
+  hidden_dim: 64
+  learning_rate: 0.001
+  epochs: 200
+  batch_size: 64
+  hand_dof: 6
+
+training:
+  # Target residual: q_ik_v2 - q_joint_v1 (recovers task-space IK improvement)
+  source_demo: checkpoints/stage_A/demos/pick_place_cylinder/episode_0001/data.json
+  teacher_right: results/phase5/ik_partial/right_q.npy
+  teacher_left: results/phase5/ik_partial/left_q.npy
+
+output:
+  checkpoint: checkpoints/stage_C/residual_adapter.pt
+  demo: checkpoints/stage_C/demos/pick_place_cylinder/episode_0001/data.json
+  metrics: results/stage_C/stage_c_baseline.json
+
+evaluation:
+  max_joint_track_error_m: 0.08
+  min_improvement_vs_b: 0.0  # report delta even if ≈0

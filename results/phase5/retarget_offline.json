@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-08-31T11:26:21.855115+00:00",
+  "source_demo": "/home/autonomique/jp_test/checkpoints/stage_A/demos/pick_place_cylinder/episode_0001/data.json",
+  "output_demo": "/home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json",
+  "num_frames": 570,
+  "method": "task_space_ik_v2",
+  "limit_violations": 0,
+  "mean_frame_delta": 0.0038971014457867053,
+  "max_frame_delta": 0.01827467155595197,
+  "phase5_retarget_pass": true
+}

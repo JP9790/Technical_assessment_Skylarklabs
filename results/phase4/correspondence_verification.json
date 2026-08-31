@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-08-30T20:58:33.112790+00:00",
+  "correspondence_file": "/home/autonomique/jp_test/configs/correspondence_table.yaml",
+  "dex3_required_frames": [
+    "left_hand_index_1_link",
+    "left_hand_middle_1_link",
+    "left_hand_palm_link",
+    "left_hand_thumb_2_link",
+    "left_wrist_yaw_link",
+    "right_hand_index_1_link",
+    "right_hand_middle_1_link",
+    "right_hand_palm_link",
+    "right_hand_thumb_2_link",
+    "right_wrist_yaw_link"
+  ],
+  "brainco_required_frames": [
+    "left_hand_base_link",
+    "left_index_tip",
+    "left_middle_tip",
+    "left_pinky_tip",
+    "left_ring_tip",
+    "left_thumb_tip",
+    "right_hand_base_link",
+    "right_index_tip",
+    "right_middle_tip",
+    "right_pinky_tip",
+    "right_ring_tip",
+    "right_thumb_tip"
+  ],
+  "dex3_missing": [],
+  "brainco_missing": [],
+  "yaml_verification_pass": true,
+  "phase4_status": "pass"
+}

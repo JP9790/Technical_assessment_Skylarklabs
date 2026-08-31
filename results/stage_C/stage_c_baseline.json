@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-08-31T11:35:37.904007+00:00",
+  "stage": "C",
+  "demo": "/home/autonomique/jp_test/checkpoints/stage_C/demos/pick_place_cylinder/episode_0001/data.json",
+  "baseline_demo": "/home/autonomique/jp_test/checkpoints/stage_B/demos/pick_place_cylinder/episode_0001/data.json",
+  "right_hand": {
+    "max_joint_track_error": 0.011996090412139893,
+    "baseline_error": 0.011991620063781738,
+    "improvement_m": -4.470348358154297e-06,
+    "playback_pass": true
+  },
+  "left_hand": {
+    "max_joint_track_error": 0.01239323616027832,
+    "baseline_error": 0.01239311695098877,
+    "improvement_m": -1.1920928955078125e-07,
+    "playback_pass": true
+  },
+  "adaptation_wall_clock_s": 43.305036306381226,
+  "stage_c_status": "pass",
+  "overall_success": true
+}

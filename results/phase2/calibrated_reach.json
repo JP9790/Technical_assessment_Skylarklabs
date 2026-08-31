@@ -1,0 +1,18 @@
+{
+  "joints": {
+    "waist_yaw_joint": 0.0,
+    "right_shoulder_pitch_joint": 0.0,
+    "right_shoulder_roll_joint": 0.0,
+    "right_shoulder_yaw_joint": 0.0,
+    "right_elbow_joint": 0.0,
+    "right_wrist_roll_joint": 0.0,
+    "right_wrist_pitch_joint": 0.0,
+    "right_wrist_yaw_joint": 0.0
+  },
+  "palm_object_dist_m": 0.7287940382957458,
+  "calibration_score": 0.6094194011688232,
+  "object_init_z": 0.8399999737739563,
+  "object_final_z": -0.02157016098499298,
+  "lift_delta_m": -0.8615701347589493,
+  "lift_success": false
+}

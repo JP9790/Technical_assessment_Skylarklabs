@@ -1,6 +1,6 @@
 # Results — achievements, pass criteria, and artifacts
 
-This document summarizes **what was achieved**, **which phases pass**, and **what each pass gate checks**. Numbers below come from the committed result files in this directory (generated 2026-08-31).
+This document summarizes **what was achieved**, **which phases pass**, and **what each pass gate checks**. Numbers below come from the committed result files in this directory (2026-08-31).
 
 **Quick verification:**
 
